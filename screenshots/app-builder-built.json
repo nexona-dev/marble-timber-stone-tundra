@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "SellBizOnline — List for £5. Keep 100% of the sale.",
+      "hasCanvas": false,
+      "bodyTextLen": 4230,
+      "bodyTextHash": "35280f3d71989793caf05b05866c3ececf14053ab42998d924e656b4c5e53290",
+      "bodyTextPrefix": "Skip to content SellBiz Online Browse Pricing Dashboard £ $ List",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "SellBizOnline — List for £5. Keep 100% of the sale.",
+      "hasCanvas": false,
+      "bodyTextLen": 4239,
+      "bodyTextHash": "915a6b527e5a7d01f29e7239274a64006b3cc75eb6e336d33cf388117d7b18cb",
+      "bodyTextPrefix": "Skip to content SellBiz Online £ $ USA · UK · WORLDWIDE List you",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

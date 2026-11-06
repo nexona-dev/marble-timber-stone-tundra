@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", ui-sans-serif, sans-serif;
+
+  --color-bg: #0c1220;
+  --color-raised: #10192b;
+  --color-surface: #162033;
+  --color-surface-2: #1d2b42;
+  --color-fg: #f3f6fb;
+  --color-muted: #9aa8bd;
+  --color-primary: #12b981;
+  --color-primary-strong: #0e9f6e;
+  --color-on-primary: #06281c;
+  --color-accent: #e4b15a;
+  --color-line: #2c3d56;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  summary {
+    cursor: pointer;
+  }
+
+  summary {
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary) 35%, transparent);
+    color: var(--color-fg);
+  }
+}
+
+@layer components {
+  .field {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-line);
+    background: var(--color-bg);
+    color: var(--color-fg);
+    padding: 0.7rem 0.85rem;
+    min-height: 2.75rem;
+    font: inherit;
+    line-height: 1.5;
+  }
+
+  .field::placeholder {
+    color: var(--color-muted);
+  }
+
+  .field:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 28%, transparent);
+  }
+
+  textarea.field {
+    min-height: 8rem;
+    resize: vertical;
+  }
+
+  input[type="range"] {
+    accent-color: var(--color-primary);
+    height: 1.75rem;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
